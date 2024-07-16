@@ -5,8 +5,17 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './to-do-list-item.component.html',
-  styleUrl: './to-do-list-item.component.css'
+  styleUrl: './to-do-list-item.component.css',
 })
 export class ToDoListItemComponent {
+  taskTitle = 'Read my book';
+  isComplete = false;
 
+  completeTask() {
+    this.isComplete = true;
+  }
+
+  updateTitle(title: string) {
+    this.taskTitle = title;
+  }
 }

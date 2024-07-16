@@ -1,1 +1,8 @@
-<p>to-do-list works!</p>
+<div class="b">
+  <h3>Tasks</h3>
+  <app-to-do-list-item></app-to-do-list-item>
+
+  @for (task of tasks; track task.id) {
+  <li>{{ task.title }} - {{ task.isComplete }}</li>
+  }
+</div>
